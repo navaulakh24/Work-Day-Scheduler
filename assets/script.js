@@ -1,16 +1,16 @@
 let today = $('#today');
 let saveBtn = document.querySelector(".saveBtn");
-var currentTime = moment().hour();
-
+var currentDay = dayjs().format("dddd, MMMM DD, YYYY h:mm a");
+let timeOfDay = dayjs().format('HH');
 // display the current date
-$
+$("#currentDay").text(currentDay);
 
 //match date/time to past, present, future
 function trackDateHour() {
     $('.timeOfDay').each(function() {
         const currentTime = parseInt(dayjs().format('HH'));
         let calenderHour = $(this).attr("id").split("time")[1];
-        if (timeOfday < currentTime) {
+        if (timeOfDay < currentTime) {
             $(this).addClass("past");
         }
         else if (timeOfDay == currentTime) {
@@ -38,4 +38,3 @@ $("#hour-15 .description").val(localStorage.getItem("hour-15"));
 $("#hour-16 .description").val(localStorage.getItem("hour-16"));
 $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 trackDateHour();
-currentDay();
