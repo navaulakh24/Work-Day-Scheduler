@@ -1,7 +1,6 @@
 let today = $('#today');
 let saveBtn = document.querySelector(".saveBtn");
 var currentDay = dayjs().format("dddd, MMMM DD, YYYY h:mm a");
-let timeOfDay = dayjs().format('HH');
 // display the current date
 $("#currentDay").text(currentDay);
 
@@ -9,14 +8,17 @@ $("#currentDay").text(currentDay);
 function trackDateHour() {
     $('.timeOfDay').each(function() {
         const currentTime = parseInt(dayjs().format('HH'));
-        let calenderHour = $(this).attr("id").split("time")[1];
-        if (timeOfDay < currentTime) {
+        let calenderHour = $(this).attr("id").split("-")[1];
+        if (calenderHour < currentTime) {
             $(this).addClass("past");
         }
-        else if (timeOfDay == currentTime) {
+        else if (calenderHour == currentTime) {
+            $(this).removeClass("past");
             $(this).addClass("present");
         }
         else {
+            $(this).removeClass("past");
+            $(this).removeClass("present");
             $(this).addClass("future");
         }
     })
