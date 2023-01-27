@@ -5,7 +5,7 @@
 The goal was to create a work day calender from the hours of 9am-5pm using Javascript to save and retrieve data from the local storage. HTML and CSS were also used, with an emphasis on Bootstrap specifically. When you open the schedule, you are presented with the current time and date in the header. Past, present and future time blocks are colour coded for an easy to read schedule. If/else statements were also used to compare time with the current time. An event listener was applied to the "save" button when someone makes an entry in the schedule. The task manager also saves the entries to the local storage.
 #
 ### This project features a responsive design using Bootstrap.
-![Webpage]()
+![Webpage](./assets/images/Screenshot%20(9).png)
 
 #
 
