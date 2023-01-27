@@ -24,12 +24,13 @@ function trackDateHour() {
     })
 }
 
+//save content typed in calender
 $(".saveBtn").on("click", function () {
     let value = $(this).siblings(".description").val();
     let time = $(this).parent().attr("id");
     localStorage.setItem(time, value);
 })
-
+//local storage
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
 $("#hour-11 .description").val(localStorage.getItem("hour-11"));
